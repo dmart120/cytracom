@@ -16,23 +16,6 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-//Route::controller('/api', 'UrlController');
-
 Route::resource('api/items', 'UrlController');
 Route::resource('api/items/add', 'UrlController@store');
 Route::resource('api/items/{id}', 'UrlController');
-
-/*
-Route::group(array('prefix' => 'api/items'), function()
-{
-    Route::get('/api/items/{id?}', function()
-    {
-    	Route::resource('url', 'UrlController');
-    });
-
-    Route::post('/api/items/add', function()
-    {
-    	Route::resource('url', 'UrlController');
-    });
-});
-*/
